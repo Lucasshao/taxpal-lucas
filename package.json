@@ -1,23 +1,28 @@
 {
-  "name": "taxpal-lucas",
+  "name": "taxpal",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 18456",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "rm:next": "rm -rf .next",
+    "clear": "yarn rm:next && rm -rf node_modules"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.18",
+    "@tailwindcss/forms": "^0.5.7",
+    "clsx": "^2.1.0",
+    "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.1.0"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
     "eslint": "^8",
-    "eslint-config-next": "14.1.0"
+    "eslint-config-next": "14.0.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0"
   }
 }
