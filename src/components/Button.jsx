@@ -40,7 +40,7 @@ const Button = ({
   return href ? (
     <Link href={href} className={className} {...res} />
   ) : (
-    <Button className={className} {...res} />
+    <button className={className} {...res} />
   );
 };
 
