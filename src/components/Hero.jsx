@@ -79,6 +79,34 @@ const Hero = () => {
           <span className="ml-3"> Watch WebSite</span>
         </Button>
       </div>
+
+      <div className="mt-36 lg:mt-44">
+        <p className="text-base font-display text-slate-900">
+          Trusted by these six companies so far
+        </p>
+        <ul
+          role="list"
+          className="flex items-center justify-center mt-8 gap-x-8 sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0"
+        >
+          {" "}
+          {/**第一个ul对应着整体，外面的大壳，屏幕大小时改变横竖顺序，最小时是竖排，稍微大点变成横排，最大时融合  */}
+          {HeroCompanyLogoData.map((group, groupIndex) => (
+            <li key={groupIndex}>
+              <ul
+                role="list"
+                className="flex flex-col items-center gap-y-8 sm:flex-row sm:gap-x-12 sm:gap-y-0"
+              >
+                {/**第二个ul对应两小列，*/}
+                {group.map((company) => (
+                  <li key={company.name} className="flex">
+                    <Image src={company.logo} alt={company.name} unoptimized />
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </div>
     </Container>
   );
 };
